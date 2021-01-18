@@ -47,7 +47,7 @@ rails s
 
 | Method + url | Output |
 | :----------- |:-------|
-| GET {base_url}/api/v1/address/{cep} | Returns a list params according API 'http://cep.la/' |
+| GET {base_url}/api/v1/addresses?cep={cep} | Returns a list params according API 'http://cep.la/' |
 
 ## For test, run:
 

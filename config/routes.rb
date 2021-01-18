@@ -5,7 +5,7 @@ Rails.application.routes.draw do
 
   namespace :api do
     namespace :v1 do
-      resources :address, only: %i[show]
+      resources :addresses, only: %i[index]
     end
   end
 end

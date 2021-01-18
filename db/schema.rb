@@ -12,21 +12,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20_200_903_051_347) do
+ActiveRecord::Schema.define(version: 20_200_117_051_347) do
   # These are extensions that must be enabled in order to support this database
   enable_extension 'plpgsql'
 
-  create_table 'enderecos', force: :cascade do |t|
+  create_table 'addresses', force: :cascade do |t|
     t.string 'cep'
     t.string 'uf'
-    t.string 'cidade'
-    t.string 'bairro'
-    t.string 'logradouro'
+    t.string 'city'
+    t.string 'neighborhood'
+    t.string 'street'
     t.datetime 'created_at', precision: 6, null: false
     t.datetime 'updated_at', precision: 6, null: false
   end
 
   create_table 'users', force: :cascade do |t|
+    t.string 'name', default: '', null: false
     t.string 'email', default: '', null: false
     t.string 'encrypted_password', default: '', null: false
     t.string 'reset_password_token'
